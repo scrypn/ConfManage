@@ -1,0 +1,22 @@
+#!/bin/bash
+
+echo "Task 1:"
+cat /etc/passwd | grep -i bash | sort | cut -d ":" -f 1
+
+echo "Task 2:"
+tail -5 /etc/protocols | awk '{print $2, $1}' | tac
+
+echo "Task 3:"
+str=$1
+n=$(expr length "$str")
+echo -ne "+-"
+for((i=0;i<n;i++))
+do
+echo -ne "-"
+done
+echo -ne "-+\n| ${str} |\n+-";
+for ((i=0;i<n;i++))
+do
+echo -ne "-"
+done
+echo "-+"

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "Task 2:"
+tail -5 /etc/protocols | awk '{print $2, $1}' | tac

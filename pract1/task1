@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "Task 1:"
+cat /etc/passwd | grep -i bash | sort | cut -d ":" -f 1
